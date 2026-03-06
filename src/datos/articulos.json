@@ -39,6 +39,11 @@
       "codigo": "cisterna",
       "descripcion": "churrasco",
       "precio": 12
+    },
+    {
+      "codigo": "cisterna",
+      "descripcion": "de purin",
+      "precio": 150
     }
   ]
 }
