@@ -1,0 +1,309 @@
+/* =========================
+   BASE
+========================= */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 30px;
+}
+
+/* =========================
+   CONTENEDOR FACTURA
+========================= */
+
+.factura {
+  background: white;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   CABECERA EMPRESA
+========================= */
+
+.empresa {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 320px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.datosEmpresa {
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tituloFactura {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   CLIENTE
+========================= */
+
+.datosCliente {
+  margin-bottom: 25px;
+  font-size: 14px;
+  max-width: 520px;
+}
+
+.filaCliente {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.filaClienteAutocomplete {
+  align-items: flex-start;
+}
+
+.etiquetaCliente {
+  width: 100px;
+  flex: 0 0 100px;
+}
+
+.filaCliente input,
+.campoAutocomplete input {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font: inherit;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  outline: none;
+}
+
+/* =========================
+   AUTOCOMPLETE CLIENTES
+========================= */
+
+.campoAutocomplete {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.resultadosClientes {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  z-index: 20;
+  display: none;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.resultadosClientes.visible {
+  display: block;
+}
+
+.resultadoCliente {
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-top: 1px solid #f2f2f2;
+}
+
+.resultadoCliente:first-child {
+  border-top: none;
+}
+
+.resultadoCliente:hover {
+  background: #f8fafc;
+}
+
+.resultadoClienteNombre {
+  font-weight: bold;
+}
+
+.resultadoClienteIva {
+  color: #666;
+  font-size: 13px;
+}
+
+/* =========================
+   INFO FACTURA
+========================= */
+
+.infoFactura {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.infoFactura input {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  font: inherit;
+}
+
+.selectPlano {
+  border: none;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font: inherit;
+  outline: none;
+  padding: 0;
+}
+
+.cuentaPlano {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font: inherit;
+  outline: none;
+  width: 32ch;
+}
+
+/* =========================
+   TABLA
+========================= */
+
+.tablaFactura {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.tablaFactura th {
+  background: #f1f5f9;
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.tablaFactura td {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.tablaFactura input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+.totalLinea {
+  text-align: right;
+  font-weight: bold;
+}
+
+.colCodigo {
+  width: 14%;
+}
+
+.colArticulo {
+  width: auto;
+}
+
+.colPrecio {
+  width: 14%;
+}
+
+.colUnidades {
+  width: 10%;
+}
+
+.colTotal {
+  width: 14%;
+}
+
+/* =========================
+   TOTALES
+========================= */
+
+.totales {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.ivaInput {
+  width: 3ch;
+  border: none;
+  background: transparent;
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.ivaInput::-webkit-inner-spin-button,
+.ivaInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =========================
+   ACCIONES
+========================= */
+
+.acciones {
+  max-width: 900px;
+  margin: 12px auto 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.acciones button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font: inherit;
+  background: #1e293b;
+  color: white;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   IMPRESIÓN
+========================= */
+
+@media print {
+  .no-imprimir {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .factura {
+    box-shadow: none;
+    margin: 0;
+    max-width: none;
+  }
+}

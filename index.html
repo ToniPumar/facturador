@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Facturas</title>
+  <link rel="stylesheet" href="public/estilos.css">
+</head>
+
+<body>
+  <div class="factura">
+
+    <!-- EMPRESA -->
+    <div class="empresa">
+      <div class="logo">
+        <img id="logoEmpresa" src="./public/logo.png" alt="Logo Grupo GS">
+      </div>
+
+      <div class="datosEmpresa">
+        <strong>Óscar Manuel García Señarís</strong><br>
+        Vilariño 22<br>
+        15873 Val do Dubra<br>
+        A Coruña<br>
+        Tel: 660 918 883<br>
+        Email: gsgrupo22@gmail.com
+      </div>
+    </div>
+
+    <h2 class="tituloFactura">FACTURA</h2>
+
+    <!-- CLIENTE -->
+    <div class="datosCliente">
+      <h3>Datos de facturación</h3>
+
+      <div class="filaCliente filaClienteAutocomplete">
+        <span class="etiquetaCliente">Nombre:</span>
+
+        <div class="campoAutocomplete">
+          <input id="nombreCliente" autocomplete="off">
+          <div id="resultadosClientes" class="resultadosClientes"></div>
+        </div>
+      </div>
+
+      <div class="filaCliente">
+        <span class="etiquetaCliente">Dirección:</span>
+        <input id="direccionCliente">
+      </div>
+
+      <div class="filaCliente">
+        <span class="etiquetaCliente">Población:</span>
+        <input id="poblacionCliente">
+      </div>
+
+      <div class="filaCliente">
+        <span class="etiquetaCliente">CP:</span>
+        <input id="cpCliente">
+      </div>
+
+      <div class="filaCliente">
+        <span class="etiquetaCliente">NIF/CIF:</span>
+        <input id="dniCliente">
+      </div>
+
+      <div class="filaCliente">
+        <span class="etiquetaCliente">Teléfono:</span>
+        <input id="telefonoCliente">
+      </div>
+    </div>
+
+    <!-- INFO FACTURA -->
+    <div class="infoFactura">
+      <div>
+        Número factura<br>
+        <input id="numeroFactura" value="">
+      </div>
+
+      <div>
+        Fecha<br>
+        <input id="fechaFactura" type="date">
+      </div>
+
+      <div>
+        Forma de pago<br>
+        <select id="formaPago" class="selectPlano">
+          <option value="efectivo">Contado</option>
+          <option value="transferencia" selected>Transferencia</option>
+        </select>
+      </div>
+
+      <div id="bloqueCuenta">
+        Número de cuenta<br>
+        <input
+          id="numeroCuenta"
+          class="cuentaPlano"
+          value="ES51 2080 0315 8030 40017489"
+          readonly
+        >
+      </div>
+    </div>
+
+    <!-- TABLA ARTÍCULOS -->
+    <table class="tablaFactura">
+      <colgroup>
+        <col class="colCodigo">
+        <col class="colArticulo">
+        <col class="colPrecio">
+        <col class="colUnidades">
+        <col class="colTotal">
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Artículo</th>
+          <th>Precio</th>
+          <th>Und</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+
+      <tbody id="cuerpoArticulos">
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+
+        <tr>
+          <td><input class="codigoArticulo" autocomplete="off"></td>
+          <td><input class="nombreArticulo" autocomplete="off"></td>
+          <td><input class="precioArticulo" type="number" step="0.1"></td>
+          <td><input class="unidadesArticulo" type="number" step="0.1"></td>
+          <td class="totalLinea"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- TOTALES -->
+    <div class="totales">
+      <div>Base imponible: <span id="totalNeto">0 €</span></div>
+      <div>
+        IVA (<input id="porcentajeIva" class="ivaInput" type="number" value="21" min="0" step="0.01">%):
+        <span id="totalIva">0 €</span>
+      </div>
+      <div>Total factura: <span id="totalFactura">0 €</span></div>
+    </div>
+
+  </div>
+
+  <div class="acciones no-imprimir">
+    <button id="botonPdf" type="button">📄 Descargar PDF</button>
+  </div>
+
+  <script type="module" src="./src/main.ts"></script>
+</body>
+</html>

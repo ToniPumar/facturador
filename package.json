@@ -1,0 +1,22 @@
+{
+  "name": "facturador",
+  "version": "1.0.0",
+  "description": "Crear facturas online",
+  "author": "Toni Pumar",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "start": "parcel index.html",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url ./",
+    "preview": "python3 -m http.server 4173 -d dist"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,50 @@
+
+{
+  "clientes": [
+    {
+      "nombre": "Empresa Demo SL",
+      "nif": "B12345678",
+      "direccion": "Calle Mayor 12",
+      "poblacion": "Santiago de Compostela",
+      "cp": "15701",
+      "telefono": "600123123",
+      "iva": 13
+    },
+    {
+      "nombre": "Taller López",
+      "nif": "B87654321",
+      "direccion": "Polígono Industrial Nave 4",
+      "poblacion": "A Coruña",
+      "cp": "15008",
+      "telefono": "698555444",
+      "iva": 10
+    },
+    {
+      "nombre": "Restaurante O Mar",
+      "nif": "B56789123",
+      "direccion": "Avenida do Porto 8",
+      "poblacion": "Muros",
+      "cp": "15250",
+      "telefono": "981555222",
+      "iva": 10
+    },
+    {
+      "nombre": "Antonio Pumar García",
+      "nif": "45848495L",
+      "direccion": "Quintán 10, Buxán",
+      "poblacion": "Val do Dubra",
+      "cp": "15873",
+      "telefono": "670384484",
+      "iva": 10
+    },
+    {
+      "nombre": "Antonio Pumar García",
+      "nif": "45848495L",
+      "direccion": "Quintán 10, Buxán",
+      "poblacion": "Val do Dubra",
+      "cp": "15873",
+      "telefono": "670384484",
+      "iva": 20
+    }
+  ]
+}

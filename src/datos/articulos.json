@@ -1,0 +1,39 @@
+{
+  "articulos": [
+    {
+      "codigo": "tractor",
+      "descripcion": "rolos",
+      "precio": 10
+    },
+    {
+      "codigo": "tractor",
+      "descripcion": "transporter",
+      "precio": 20
+    },
+    {
+      "codigo": "tractor",
+      "descripcion": "desbroce",
+      "precio": 15
+    },
+    {
+      "codigo": "pala",
+      "descripcion": "picadora",
+      "precio": 35
+    },
+    {
+      "codigo": "pala",
+      "descripcion": "carga de estiércol",
+      "precio": 18
+    },
+    {
+      "codigo": "cisterna",
+      "descripcion": "purín",
+      "precio": 25
+    },
+    {
+      "codigo": "cisterna",
+      "descripcion": "agua",
+      "precio": 12
+    }
+  ]
+}
