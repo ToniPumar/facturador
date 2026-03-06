@@ -719,10 +719,9 @@ var _html2Canvas = require("html2canvas");
 var _html2CanvasDefault = parcelHelpers.interopDefault(_html2Canvas);
 var _jspdf = require("jspdf");
 var _jspdfDefault = parcelHelpers.interopDefault(_jspdf);
-// Imports locales originales, los dejamos comentados por si quieres volver al modo solo-local.
 // import datosClientes from "./datos/clientes.json";
 // import datosArticulos from "./datos/articulos.json";
-// Fallback local por si falla la carga desde GitHub RAW.
+// Por si fall raw
 var _clientesJson = require("./datos/clientes.json");
 var _clientesJsonDefault = parcelHelpers.interopDefault(_clientesJson);
 var _articulosJson = require("./datos/articulos.json");
@@ -742,7 +741,7 @@ function obtenerNombreArchivo() {
     const parteNumero = numeroFactura ? numeroFactura : "sin-numero";
     const parteFecha = fechaFactura ? fechaFactura : "sin-fecha";
     const nombre = nombreCliente ? nombreCliente : "sin-nombre";
-    return `${nombre}-${parteNumero}-${parteFecha}.pdf`;
+    return `${parteFecha}-${parteNumero}-${nombre}.pdf`;
 }
 async function generarPdfFactura() {
     const contenedorFactura = document.querySelector(".factura");

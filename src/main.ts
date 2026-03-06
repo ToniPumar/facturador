@@ -1,11 +1,11 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
-// Imports locales originales, los dejamos comentados por si quieres volver al modo solo-local.
+
 // import datosClientes from "./datos/clientes.json";
 // import datosArticulos from "./datos/articulos.json";
 
-// Fallback local por si falla la carga desde GitHub RAW.
+// Por si fall raw
 import datosClientesLocal from "./datos/clientes.json";
 import datosArticulosLocal from "./datos/articulos.json";
 
@@ -57,7 +57,7 @@ function obtenerNombreArchivo(): string {
   const parteFecha = fechaFactura ? fechaFactura : "sin-fecha";
   const nombre = nombreCliente ? nombreCliente : "sin-nombre";
 
-  return `${nombre}-${parteNumero}-${parteFecha}.pdf`;
+  return `${parteFecha}-${parteNumero}-${nombre}.pdf`;
 }
 
 async function generarPdfFactura(): Promise<void> {
