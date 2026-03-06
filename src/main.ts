@@ -1,7 +1,13 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import datosClientes from "./datos/clientes.json";
-import datosArticulos from "./datos/articulos.json";
+
+// Imports locales originales, los dejamos comentados por si quieres volver al modo solo-local.
+// import datosClientes from "./datos/clientes.json";
+// import datosArticulos from "./datos/articulos.json";
+
+// Fallback local por si falla la carga desde GitHub RAW.
+import datosClientesLocal from "./datos/clientes.json";
+import datosArticulosLocal from "./datos/articulos.json";
 
 type Cliente = {
   nombre: string;
@@ -26,6 +32,12 @@ type Articulo = {
 type RespuestaArticulos = {
   articulos: Articulo[];
 };
+
+const URL_CLIENTES_RAW =
+  "https://raw.githubusercontent.com/ToniPumar/facturador/main/src/datos/clientes.json";
+
+const URL_ARTICULOS_RAW =
+  "https://raw.githubusercontent.com/ToniPumar/facturador/main/src/datos/articulos.json";
 
 const MINIMO_CARACTERES_BUSQUEDA = 4;
 
@@ -220,12 +232,29 @@ function recalcularFactura(): void {
 
 async function cargarClientes(): Promise<void> {
   try {
-    const datos = datosClientes as RespuestaClientes;
+    const respuesta = await fetch(URL_CLIENTES_RAW, {
+      cache: "no-store",
+    });
+
+    if (!respuesta.ok) {
+      throw new Error(`Error cargando clientes RAW: ${respuesta.status}`);
+    }
+
+    const datos = (await respuesta.json()) as RespuestaClientes;
     clientesCargados = Array.isArray(datos.clientes) ? datos.clientes : [];
-    console.log("Clientes cargados:", clientesCargados);
+
+    console.log("Clientes cargados desde RAW:", clientesCargados);
   } catch (error) {
-    console.error("No se pudieron cargar los clientes:", error);
-    clientesCargados = [];
+    console.warn("Falló la carga de clientes desde RAW, uso el JSON local:", error);
+
+    try {
+      const datosLocales = datosClientesLocal as RespuestaClientes;
+      clientesCargados = Array.isArray(datosLocales.clientes) ? datosLocales.clientes : [];
+      console.log("Clientes cargados desde JSON local:", clientesCargados);
+    } catch (errorLocal) {
+      console.error("No se pudieron cargar los clientes ni en RAW ni en local:", errorLocal);
+      clientesCargados = [];
+    }
   }
 }
 
@@ -354,12 +383,29 @@ function iniciarAutocompleteClientes(): void {
 
 async function cargarArticulos(): Promise<void> {
   try {
-    const datos = datosArticulos as RespuestaArticulos;
+    const respuesta = await fetch(URL_ARTICULOS_RAW, {
+      cache: "no-store",
+    });
+
+    if (!respuesta.ok) {
+      throw new Error(`Error cargando artículos RAW: ${respuesta.status}`);
+    }
+
+    const datos = (await respuesta.json()) as RespuestaArticulos;
     articulosCargados = Array.isArray(datos.articulos) ? datos.articulos : [];
-    console.log("Artículos cargados:", articulosCargados);
+
+    console.log("Artículos cargados desde RAW:", articulosCargados);
   } catch (error) {
-    console.error("No se pudieron cargar los artículos:", error);
-    articulosCargados = [];
+    console.warn("Falló la carga de artículos desde RAW, uso el JSON local:", error);
+
+    try {
+      const datosLocales = datosArticulosLocal as RespuestaArticulos;
+      articulosCargados = Array.isArray(datosLocales.articulos) ? datosLocales.articulos : [];
+      console.log("Artículos cargados desde JSON local:", articulosCargados);
+    } catch (errorLocal) {
+      console.error("No se pudieron cargar los artículos ni en RAW ni en local:", errorLocal);
+      articulosCargados = [];
+    }
   }
 }
 
