@@ -1,0 +1,274 @@
+body {
+  background: #f4f6f8;
+  min-width: 960px;
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.factura {
+  background: #fff;
+  width: 900px;
+  min-width: 900px;
+  margin: auto;
+  padding: 30px;
+  box-shadow: 0 5px 20px #0000001a;
+}
+
+.empresa {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.logo {
+  width: 320px;
+}
+
+.logo img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.datosEmpresa {
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tituloFactura {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.datosCliente {
+  max-width: 520px;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.filaCliente {
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+  display: flex;
+}
+
+.filaClienteAutocomplete {
+  align-items: flex-start;
+}
+
+.etiquetaCliente {
+  flex: 0 0 100px;
+  width: 100px;
+}
+
+.filaCliente input, .campoAutocomplete input {
+  font: inherit;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+.campoAutocomplete {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.resultadosClientes {
+  z-index: 20;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 220px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  box-shadow: 0 8px 18px #00000014;
+}
+
+.resultadosClientes.visible {
+  display: block;
+}
+
+.resultadoCliente {
+  cursor: pointer;
+  border-top: 1px solid #f2f2f2;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.resultadoCliente:first-child {
+  border-top: none;
+}
+
+.resultadoCliente:hover {
+  background: #f8fafc;
+}
+
+.resultadoClienteNombre {
+  font-weight: bold;
+}
+
+.resultadoClienteIva {
+  color: #666;
+  font-size: 13px;
+}
+
+.infoFactura {
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  display: flex;
+}
+
+.infoFactura input {
+  font: inherit;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+}
+
+.selectPlano {
+  appearance: none;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.cuentaPlano {
+  font: inherit;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  width: 32ch;
+}
+
+.tablaFactura {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.tablaFactura th {
+  text-align: left;
+  background: #f1f5f9;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.tablaFactura td {
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+.tablaFactura input {
+  width: 100%;
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+.totalLinea {
+  text-align: right;
+  font-weight: bold;
+}
+
+.colCodigo {
+  width: 14%;
+}
+
+.colArticulo {
+  width: auto;
+}
+
+.colPrecio {
+  width: 14%;
+}
+
+.colUnidades {
+  width: 10%;
+}
+
+.colTotal {
+  width: 14%;
+}
+
+.totales {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.ivaInput {
+  width: 3ch;
+  font: inherit;
+  text-align: right;
+  -moz-appearance: textfield;
+  background: none;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ivaInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ivaInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.acciones {
+  justify-content: flex-end;
+  max-width: 900px;
+  margin: 12px auto 0;
+  display: flex;
+}
+
+.acciones button {
+  cursor: pointer;
+  font: inherit;
+  color: #fff;
+  background: #1e293b;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 14px #00000026;
+}
+
+@media print {
+  .no-imprimir {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    padding: 0;
+  }
+
+  .factura {
+    box-shadow: none;
+    width: 900px;
+    min-width: 900px;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=facturador.4b5217a0.css.map */

@@ -7,6 +7,7 @@ body {
   background: #f4f6f8;
   margin: 0;
   padding: 30px;
+  min-width: 960px;
 }
 
 /* =========================
@@ -16,7 +17,8 @@ body {
 .factura {
   background: white;
   padding: 30px;
-  max-width: 900px;
+  width: 900px;
+  min-width: 900px;
   margin: auto;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
@@ -304,6 +306,7 @@ body {
   .factura {
     box-shadow: none;
     margin: 0;
-    max-width: none;
+    width: 900px;
+    min-width: 900px;
   }
 }
