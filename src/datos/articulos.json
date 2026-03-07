@@ -1,49 +1,79 @@
 {
   "articulos": [
     {
-      "codigo": "tractor",
-      "descripcion": "rolos",
+      "codigo": "Tractor",
+      "descripcion": "Rolos sin picar",
+      "precio": 9
+    },
+    {
+      "codigo": "Tractor",
+      "descripcion": "Rolos 1/2 picado",
       "precio": 10
     },
     {
-      "codigo": "tractor",
-      "descripcion": "transporter",
-      "precio": 20
+      "codigo": "Tractor",
+      "descripcion": "Rolos picados",
+      "precio": 11
     },
     {
-      "codigo": "tractor",
-      "descripcion": "desbroce",
-      "precio": 15
+      "codigo": "Tractor",
+      "descripcion": "Encintar",
+      "precio": 9
     },
     {
-      "codigo": "pala",
-      "descripcion": "picadora",
-      "precio": 35
+      "codigo": "Tractor",
+      "descripcion": "Desbrozadora",
+      "precio": 65
     },
     {
-      "codigo": "pala",
-      "descripcion": "carga de estiércol",
-      "precio": 18
+      "codigo": "Tractor",
+      "descripcion": "Máquina brazo",
+      "precio": 65
     },
     {
-      "codigo": "cisterna",
-      "descripcion": "purín",
-      "precio": 25
+      "codigo": "Tractor",
+      "descripcion": "Trituradora",
+      "precio": 200
     },
     {
-      "codigo": "cisterna",
-      "descripcion": "agua",
-      "precio": 12
+      "codigo": "Tractor",
+      "descripcion": "Arado forestal",
+      "precio": 10
     },
     {
-      "codigo": "cisterna",
-      "descripcion": "churrasco",
-      "precio": 12
+      "codigo": "Tractor",
+      "descripcion": "Desbrozadora arrastrada",
+      "precio": 60
     },
     {
-      "codigo": "cisterna",
-      "descripcion": "de purin",
-      "precio": 150
+      "codigo": "Tractor",
+      "descripcion": "Rotativa",
+      "precio": 65
+    },
+    {
+      "codigo": "Mixta",
+      "descripcion": "Cazo",
+      "precio": 50
+    },
+    {
+      "codigo": "Mixta",
+      "descripcion": "Cargar esterco",
+      "precio": 60
+    },
+    {
+      "codigo": "Mini pala",
+      "descripcion": "Cazo",
+      "precio": 40
+    },
+    {
+      "codigo": "Mini pala",
+      "descripcion": "Martillo",
+      "precio": 50
+    },
+    {
+      "codigo": "Mini pala",
+      "descripcion": "Cortasetos",
+      "precio": 45
     }
   ]
 }
