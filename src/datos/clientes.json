@@ -2,49 +2,112 @@
 {
   "clientes": [
     {
-      "nombre": "javie rial",
-      "nif": "B12345678",
-      "direccion": "Calle Mayor 12",
+      "nombre": "Gandeiria Xan Blanco S.C",
+      "nif": "J70040613",
+      "direccion": "Portomeiro 8",
+      "poblacion": "Val do Dubra",
+      "cp": "15871",
+      "telefono": "646639830",
+      "iva": 10
+    },
+    {
+      "nombre": "Juan Manuel Cornes Suarez",
+      "nif": "33299498Y",
+      "direccion": "Reborede de arriba 1 - Buxán",
+      "poblacion": "Val do Dubra",
+      "cp": "15873",
+      "telefono": "",
+      "iva": 10
+    },
+    {
+      "nombre": "Gandeiria Banzas Vázquez",
+      "nif": "J70038757",
+      "direccion": "Reboredo 10 - Buxán",
+      "poblacion": "Val do Dubra",
+      "cp": "15873",
+      "telefono": "",
+      "iva": 10
+    },
+    {
+      "nombre": "Antonio Pumar García",
+      "nif": "76347101G",
+      "direccion": "Quintán 10, Buxán",
+      "poblacion": "Val do Dubra",
+      "cp": "15873",
+      "telefono": "670384484",
+      "iva": 10
+    },
+    {
+      "nombre": "SAT Pesadoira Xuga 1242",
+      "nif": "V15911688",
+      "direccion": "Pesadoira s/n",
+      "poblacion": "Negreira",
+      "cp": "15878",
+      "telefono": "",
+      "iva": 10
+    },
+        {
+      "nombre": "Servicios agricolas pose s.l",
+      "nif": "B70036512",
+      "direccion": "Rua volframio 1/3 - Poligono de Bertua ",
+      "poblacion": "Carballo",
+      "cp": "15105",
+      "telefono": "",
+      "iva": 21
+    },
+        {
+      "nombre": "Os Agros de Frieiro s.Coop Galega",
+      "nif": "F09803578",
+      "direccion": "Frieiro 13 - Castriz",
+      "poblacion": "Santa Comba",
+      "cp": "",
+      "telefono": "",
+      "iva": 10
+    },    {
+      "nombre": "San vicente de niveiro S.A.T-1141 XUGA",
+      "nif": "V15829070",
+      "direccion": "Lugar de Nariño - Niveiro s/n",
+      "poblacion": "Val do Dubra",
+      "cp": "15873",
+      "telefono": "",
+      "iva": 10
+    },
+        {
+      "nombre": "Busto forestal S.L",
+      "nif": "ESB70454673",
+      "direccion": "Vilariño - Busto 7",
       "poblacion": "Santiago de Compostela",
-      "cp": "15701",
-      "telefono": "600123123",
-      "iva": 13
+      "cp": "15884",
+      "telefono": "",
+      "iva": 21
     },
-    {
-      "nombre": "Taller López",
-      "nif": "B87654321",
-      "direccion": "Polígono Industrial Nave 4",
-      "poblacion": "A Coruña",
-      "cp": "15008",
-      "telefono": "698555444",
-      "iva": 10
-    },
-    {
-      "nombre": "Restaurante O Mar",
-      "nif": "B56789123",
-      "direccion": "Avenida do Porto 8",
-      "poblacion": "Muros",
-      "cp": "15250",
-      "telefono": "981555222",
-      "iva": 10
-    },
-    {
-      "nombre": "Antonio Pumar García",
-      "nif": "45848495L",
-      "direccion": "Quintán 10, Buxán",
+        {
+      "nombre": "Ganaderia cornes S.C",
+      "nif": "J70313473",
+      "direccion": "Cornes 1 - Vilariño",
       "poblacion": "Val do Dubra",
-      "cp": "15873",
-      "telefono": "670384484",
+      "cp": "15871",
+      "telefono": "",
       "iva": 10
     },
-    {
-      "nombre": "Antonio Pumar García",
-      "nif": "45848495L",
-      "direccion": "Quintán 10, Buxán",
+        {
+      "nombre": "Ganderia o Xastre S.C",
+      "nif": "J70418215",
+      "direccion": "Quintás - Paramos 9",
       "poblacion": "Val do Dubra",
-      "cp": "15873",
-      "telefono": "670384484",
-      "iva": 20
+      "cp": "15878",
+      "telefono": "",
+      "iva": 10
+    },
+        {
+      "nombre": "Javier Rial Rodríguez",
+      "nif": "45870599C",
+      "direccion": "Portomeiro 4",
+      "poblacion": "Val do Dubra",
+      "cp": "15871",
+      "telefono": "",
+      "iva": 21
     }
+     
   ]
 }
